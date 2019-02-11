@@ -8,8 +8,29 @@ body{
     width: 80px;
 
     display: inline-block;
-    /*border: 1px solid #FFFFCC;*/
+    border: 1px solid #FFFFCC;
     background-color: yellow;
     border-radius: 100px;
     transform: scale(0.5, 0.5);
+
+    animation-name:glimmer;
+    animation: glimmer 4s infinite;
 }
+
+@keyframes glimmer {
+	0% {
+		background-color: #FFF7B7;
+	}
+	50%{
+		background-color: yellow ;
+	}
+	100% {
+		background-color: #FFF7B7;
+	}
+}
+
+/*
+Soft yellow: #FFF7B7;
+
+
+*/
