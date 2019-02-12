@@ -29,8 +29,13 @@ body{
 	}
 }
 
+body:hover {
+	background-color: red;
+}
+
 /*
 Soft yellow: #FFF7B7;
 
 
 */
+
