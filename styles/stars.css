@@ -11,6 +11,7 @@
 html, body {
 	font-family: 'Work Sans', sans-serif;
 	line-height: 1.7em;
+	background: #000;
 }
 
 a {
@@ -100,11 +101,8 @@ input {
 
 /* Stars */
 #stars {
-	position: absolute;
 	height: 100%;
-	width: 200%; 
-	transform: translate(-50%,0%);
-	background-position: center center;
+	width: 100%; 
 	mix-blend-mode: screen;
 	background-color: black;
 	background-image:
@@ -144,7 +142,7 @@ input {
 	background: #23323C;
 	border-radius: 8px;
 	padding: 20px;
-	margin-top: 50px;
+	margin-top: 30px;
 	height: 100%;
 }
 
