@@ -26,6 +26,15 @@ p {
 	margin: 10px 0;
 }
 
+label {
+	width: 100vw;
+}
+
+input {
+	position: absolute;
+	left: -99999px;
+}
+
 /* Utility Classes */
 .container {
 	margin: auto;
@@ -33,7 +42,6 @@ p {
 	overflow: auto;
 	padding: 0 20px;
 }
-
 
 /* Background */
 .bg {
@@ -62,6 +70,13 @@ p {
 	color: rgba(0, 0, 0, .6);	
 }
 
+
+#navbar li {
+	float: right;
+	list-style: none;
+	text-align: center;
+}
+
 #navbar ul {
 	float: right;
 	list-style: none;
@@ -71,13 +86,13 @@ p {
 	float: left;
 }
 
-#navbar ul li a {
+#navbar ul li a{
 	display: block;
 	padding: 20px;
 	text-align: center;
 }
 
-#navbar ul li a:hover {
+#navbar ul li a:hover{
 	background: #0b1b26;
 	color: #3e515e;
 }
@@ -96,35 +111,30 @@ p {
 	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 1px, transparent 10px),
 	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 2px, transparent 30px),
 	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 1px, transparent 40px);
-	
 	background-size: 500px 500px, 400px 400px, 300px 300px, 180px 180px;
 	background-position: 0 0, 30px 140px, -80px 340px, 159px 200px;
+	animation: animatedBackground 30s linear infinite;
 }
 
-/* #stars {
-	animation: animatedBackground 30s linear infinite;
-} */
-/* 
-#stars2 {
-	display: none;
+/* Page Transitions */
+:checked ~ .slide-out {
+	animation: slide-out 1.75s ease forwards;
+}
+
+:checked ~ .page{ 
+	transition: 1s;
+	left: 0;
+
+}
+
+.page {
 	position: absolute;
-	height: 100%;
-	width: 200%; 
-	transform: translate(-50%,0%);
-	background-position: center center;
-	mix-blend-mode: screen;
-	background-color: black;
-	background-image:
-	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 2px, transparent 30px),
-	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 1px, transparent 10px),
-	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 2px, transparent 30px),
-	  radial-gradient(rgb(177, 178, 250), rgba(255, 255, 255, 0.2) 1px, transparent 40px);
-	
-	background-size: 500px 500px, 400px 400px, 300px 300px, 180px 180px;
-	background-position: -35px 68px, 82px 24px, 94px 211px, 125px 207px;
-
-} */
-
+	left: 9999px;
+	height: 100vh;
+	width: 100%;
+	background: black;
+	color: white;
+}
 
 /* Animation */
 @keyframes animatedBackground {
@@ -139,5 +149,34 @@ p {
 	100% {
 		background-position: 100% 100%;
 	}
-
 }
+
+@keyframes slide-in {
+	0% {
+	  transform: translate(-120%);
+	}
+	25% {
+	  transform: translate(-120%) scale(0.8);
+	}
+	75% {
+	  transform: scale(0.8);
+	  transition-timing-function: ease-out;
+	}
+	100% {
+	  transform: scale(1);
+	}
+}
+
+  @keyframes slide-out {
+	25% {
+	  transform: scale(0.8);
+	}
+	75% {
+	  transform: translate(120%) scale(0.8);
+	  transition-timing-function: ease-out;
+	}
+	100% {
+	  transform: translate(120%) scale(1);
+	  
+	}
+  }
