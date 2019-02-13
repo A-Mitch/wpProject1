@@ -1,0 +1,77 @@
+body {
+	background-color: #040403;
+}
+
+.stars1{
+	height: 15px;
+    width: 15px;
+
+    display: block;
+    border: none;
+    background-color: #e6e600;
+
+    border-radius: 100px;
+    transform: scale(0.5, 0.5);
+
+    animation-name: inside_star1;
+  	animation: inside_star1 6s infinite;
+
+  	display: inline-block;
+
+  	/*box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px #e6e600,
+    0 0 140px 90px #0ff;*/
+
+}
+
+@keyframes inside_star1 {
+  0% {
+  	background-color: #ffff66;
+  	box-shadow: 0 0 15px 10px #ffff66;
+  }
+  50% {
+  	background-color: #ff751a;
+  	box-shadow: 0 0 30px 20px #ff751a;
+  }
+  100% {
+  	background-color: #ffff66;
+  	box-shadow: 0 0 15px 10px #ffff66;
+  }
+
+}
+
+.stars{
+	height: 15px;
+    width: 15px;
+
+    display: block;
+    border: none;
+    background-color: #e6e600;
+
+    border-radius: 100px;
+    transform: scale(0.5, 0.5);
+
+    animation-name: inside_star;
+  	animation: inside_star 6s infinite;
+
+  	display: inline-block;
+
+}
+
+@keyframes inside_star {
+  0% {
+  	background-color: #1a75ff;
+  	box-shadow: 0 0 15px 10px #1a75ff;
+  }
+  50% {
+  	background-color: #800080;
+  	box-shadow: 0 0 30px 20px #800080;
+  }
+  100% {
+  	background-color: #1a75ff;
+  	box-shadow: 0 0 15px 10px #1a75ff;
+  }
+
+}
+
