@@ -5,51 +5,84 @@
 	padding: 0;
 }
 
-/* Setup */
+/* Main Styling */
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans');
+
+html, body {
+	font-family: 'Work Sans', sans-serif;
+	line-height: 1.7em;
+}
+
+a {
+	text-decoration: none;
+	color: #040303;
+}
+
+h1, h2, h3 {
+	padding-bottom: 20px;
+}
+
+p { 
+	margin: 10px 0;
+}
+
+/* Utility Classes */
+.container {
+	margin: auto;
+	max-width: 1100px;
+	overflow: auto;
+	padding: 0 20px;
+}
 
 
 /* Background */
 .bg {
-	background: radial-gradient(ellipse at bottom, rgb(27, 27, 56) 0%,rgb(21, 21, 170) 100%);
+	background: radial-gradient(ellipse at bottom, #1b1b38 0%,rgb(21, 21, 170) 100%);
   	height: 100vh;
 	overflow: hidden;
 }
 
+/* Navbar */
+#navbar {
+	background: #162733;
+	color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	position: static;
+}
 
-/* Objects */
+#navbar a {
+	color: #040303;
+}
 
-/* @keyframes glimmer {
-	0% {
-		background-color: #FFF7B7;
-	}
-	50%{
-		background-color: yellow ;
-	}
-	100% {
-		background-color: #FFF7B7;
-	}
-} */
+#navbar h1 {
+	float: left;
+	padding-top: 20px;
+	color: rgba(0, 0, 0, .6);	
+}
 
+#navbar ul {
+	float: right;
+	list-style: none;
+}
 
-/* #stars {
-	position: absolute;
-	height: 100%;
-	width: 200%; 
-	transform: translate(-50%,0%); 
-	background-position: center center; 
-	mix-blend-mode: screen;
-	background-color: black;
-	background-image:
-	  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-	  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-	  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-	  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-	  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-	  
-	background-size: 600px 600px, 400px 400px, 200px 200px,150px 150px, 50px 50px; 
-	background-position: 0 0, 40px 60px, 130px 270px, 20px 180px, 70px 100px;
-} */
+#navbar ul li {
+	float: left;
+}
 
+#navbar ul li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+}
+
+#navbar ul li a:hover {
+	background: #0b1b26;
+	color: #3e515e;
+}
+
+/* Stars */
 #stars {
 	position: absolute;
 	height: 100%;
@@ -68,7 +101,12 @@
 	background-position: 0 0, 30px 140px, -80px 340px, 159px 200px;
 }
 
+/* #stars {
+	animation: animatedBackground 30s linear infinite;
+} */
+/* 
 #stars2 {
+	display: none;
 	position: absolute;
 	height: 100%;
 	width: 200%; 
@@ -84,4 +122,22 @@
 	
 	background-size: 500px 500px, 400px 400px, 300px 300px, 180px 180px;
 	background-position: -35px 68px, 82px 24px, 94px 211px, 125px 207px;
+
+} */
+
+
+/* Animation */
+@keyframes animatedBackground {
+	0% {
+		background-position: 60% 60%;
+	}
+
+	50% {
+		background-position: 0% 0%;
+	}
+
+	100% {
+		background-position: 100% 100%;
+	}
+
 }
