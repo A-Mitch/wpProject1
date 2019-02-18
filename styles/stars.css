@@ -217,7 +217,7 @@ footer {
 
 /* Interactive Page Transitions */
 :checked ~ .slide-out {
-    animation: slide-out 4s ease forwards;
+    animation: slide-out 4s ease-in forwards;
 }
 
 :checked ~ .page {
